@@ -1,0 +1,38 @@
+Compiled from "GenDemo.java"
+class Gen<T> {
+  T ob;
+
+  Gen(T);
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: aload_0
+       5: aload_1
+       6: putfield      #2                  // Field ob:Ljava/lang/Object;
+       9: return
+
+  T getob();
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field ob:Ljava/lang/Object;
+       4: areturn
+
+  void showType();
+    Code:
+       0: aload_0
+       1: getfield      #2                  // Field ob:Ljava/lang/Object;
+       4: invokevirtual #3                  // Method java/lang/Object.getClass:()Ljava/lang/Class;
+       7: astore_1
+       8: getstatic     #4                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      11: new           #5                  // class java/lang/StringBuilder
+      14: dup
+      15: invokespecial #6                  // Method java/lang/StringBuilder."<init>":()V
+      18: ldc           #7                  // String Type of T is
+      20: invokevirtual #8                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      23: aload_1
+      24: invokevirtual #9                  // Method java/lang/Class.getName:()Ljava/lang/String;
+      27: invokevirtual #8                  // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      30: invokevirtual #10                 // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      33: invokevirtual #11                 // Method java/io/PrintStream.println:(Ljava/lang/String;)V
+      36: return
+}
